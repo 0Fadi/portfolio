@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fadi W.naim</title>
+    <title>Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/?size=100&id=j1VehapaDMSP&format=png&color=000000">
@@ -271,18 +271,20 @@
         </div>
         <div class="contact-form">
             <h3>Send a Message</h3>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
+<form action="send_email.php" method="post">
+    <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    </div>
+    <button type="submit" class="submit-button">Send Message</button>
+</form>
+
+
         </div>
     </div>
 </section>
