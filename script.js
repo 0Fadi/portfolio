@@ -1,3 +1,26 @@
+// --- Projects filtering by category ---
+function showCategory(category) {
+  const boxes = document.querySelectorAll('.portfolio-box');
+  boxes.forEach(box => {
+    if (category === 'all' || box.classList.contains(category)) {
+      box.style.display = 'block';
+    } else {
+      box.style.display = 'none';
+    }
+  });
+
+  // Update active tab button styles
+  const buttons = document.querySelectorAll('.tab-button');
+  buttons.forEach(btn => {
+    if (btn.textContent.toLowerCase() === category) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+}
+
+// --- Navbar scroll highlighting ---
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.navbar a');
 
@@ -6,7 +29,7 @@ function removeActiveClasses() {
 }
 
 function activateNavLink() {
-  let scrollPos = window.scrollY + 120; // adjust offset for fixed header height
+  let scrollPos = window.scrollY + 120; // offset for fixed header
 
   sections.forEach(section => {
     if (
@@ -30,4 +53,7 @@ navLinks.forEach(link => {
   });
 });
 
-window.addEventListener('load', activateNavLink);
+window.addEventListener('load', () => {
+  activateNavLink();
+  showCategory('visualization'); // Show visualization category by default, change as needed
+});
