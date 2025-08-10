@@ -51,6 +51,10 @@ body {
     text-shadow: 0 0 25px var(--main-color);
 }
 .navbar a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
     font-size: 1.8rem;
     color: var(--text-color);
     margin-left: 4rem;
@@ -58,10 +62,22 @@ body {
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
-.navbar a:hover{
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--main-color);
+    transition: width 0.3s ease;
 }
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 100%;
+}
+
 #menu-icon {
     font-size: 3.6rem;
     color: var(--main-color);
@@ -220,13 +236,13 @@ span {
 
 @keyframes words {
     0%, 20% {
-        content: "Fadi Ibrahim";
+        content: "Fadi W. Naim";
     }
     21%, 40% {
         content: "a Data Analyst";
     }
     41%, 60% {
-        content: "Fadi Ibrahim";
+        content: "Fadi W. Naim";
     }
     61%, 80% {
         content: "a Data Analyst";
@@ -333,84 +349,55 @@ span {
     background-color: var(--bg-color);
     width: 50px;
 }
-
-
-
-.services {
+.services{
     background: var(--bg-color);
     color: black;
 }
-
-.services h2 {
+.services h2{
     margin-bottom: 5rem;
     color: white;
 }
-
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Ensures responsive grid layout */
+.services-container{
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
     gap: 2.5rem;
 }
-
-.service-box {
-    position: relative;
-    height: 350px; /* Fixed height for the box */
+.service-box{
+    background-color: var(--main-color);
+    height: 300px;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
-    background-size: cover;   /* Ensure the image covers the square */
-    background-position: center; /* Keep the image centered */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1.5rem;
-    overflow: hidden; /* Prevent overflow of the background image */
-    transition: background-color 0.3s ease; /* Transition for the background color change */
+    transition: 0.4s ease-in-out;
 }
-
-.service-box:hover {
-    background-color: white;
+.service-box:hover{
+    background: white;
     color: black;
     border: 5px solid var(--main-color);
+    transform: scale(1.03);
 }
-
-.service-box .service-info {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background to enhance text visibility */
-    color: white;
-    padding: 1rem;
-    border-radius: 10px;
-    width: 90%; /* Make text box width adjustable */
-    max-width: 300px; /* Limit maximum width */
-    opacity: 0; /* Initially hide text */
-    transition: opacity 0.3s ease-in-out;
-    position: absolute; /* Position text over the image */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center text horizontally and vertically */
+.service-box .service-info{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: left;
+    align-items: baseline;
+    padding: 5rem 5rem;
 }
-
-.service-box:hover .service-info {
-    opacity: 1; /* Reveal text on hover */
-}
-
-.service-info h4 {
+.service-info h4{
     font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-weight: 800;
+    line-height: 2;
 }
-
-.service-info p {
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-top: 0.5rem;
-    max-height: 70px; /* Limit paragraph height */
-    overflow: hidden;
+.service-info p{
+    font-size: 1.6rem;
+    font-weight: 600;
+    max-height: 100px;
+    line-height: 1.7;
+    margin: auto;
 }
-
-
-
-
 
 .portfolio {
     padding: 50px 0;
