@@ -313,21 +313,23 @@ span {
 }
 .timeline-content img {
   width: 100%;
-  height: 300px; /* or desired fixed height */
+  height: 100%;
   object-fit: cover;
   border-radius: 1.5rem;
   display: block;
-  margin: 0 auto 15px;
 }
 
-.timeline-content{
-    background-color: var(--bg-color);
-    border: 3px solid var(--main-color);
-    padding: 30px 50px;
-    border-radius: 4rem;
-    box-shadow: 0 0 10px var(--main-color);
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+.timeline-content {
+  width: 320px; /* or your desired fixed width */
+  height: 300px; /* fixed height */
+  padding: 0;
+  overflow: hidden; /* hide overflow if image exceeds container */
+  border-radius: 1.5rem;
+  border: 3px solid var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .timeline-content:hover{
     transform: scale(1.05);
@@ -776,6 +778,7 @@ span {
     font-size: 1rem;
     color: #888;
 }
+
 
 
 
