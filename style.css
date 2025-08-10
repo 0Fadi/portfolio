@@ -311,6 +311,15 @@ span {
     color: white;
     margin: 6px 0 15px;
 }
+.timeline-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px; /* center with spacing below */
+  border-radius: 1.5rem; /* optional: rounded corners */
+  object-fit: cover; /* ensures good scaling */
+}
+
 .timeline-content{
     background-color: var(--bg-color);
     border: 3px solid var(--main-color);
@@ -768,6 +777,7 @@ span {
     font-size: 1rem;
     color: #888;
 }
+
 
 
 
