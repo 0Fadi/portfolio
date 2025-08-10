@@ -372,17 +372,12 @@ span {
     align-items: center;
     gap: 2.5rem;
 }
-.service-box {
-    background-color: var(--main-color);
-    height: 300px;
-    border-radius: 3rem;
-    border: 5px solid transparent;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-
-    background-size: cover;        /* Make sure image covers the container */
-    background-position: center;   /* Center the image */
-    background-repeat: no-repeat;  /* Avoid repeating */
+.service-box img {
+  width: 100%;
+  height: 300px;          /* match container height */
+  object-fit: cover;      /* scales image to cover area */
+  border-radius: 3rem;
+  display: block;
 }
 .service-box:hover{
     background: white;
@@ -781,6 +776,7 @@ span {
     font-size: 1rem;
     color: #888;
 }
+
 
 
 
