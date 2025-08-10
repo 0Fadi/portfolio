@@ -1,25 +1,22 @@
-// Function to show projects based on category
-function showCategory(category) {
-    // Remove active class from all tabs
-    document.querySelectorAll('.tab-button').forEach(tab => {
-        tab.classList.remove('active');
-    });
+// Scroll spy for navbar underline
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
 
-    // Add active class to the selected tab
-    const selectedTab = document.querySelector(`.tab-button[onclick="showCategory('${category}')"]`);
-    selectedTab.classList.add('active');
+window.addEventListener("scroll", () => {
+    let current = "";
 
-    // Show or hide portfolio boxes based on category
-    document.querySelectorAll('.portfolio-box').forEach(box => {
-        if (box.classList.contains(category)) {
-            box.style.display = 'block';
-        } else {
-            box.style.display = 'none';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
         }
     });
-}
 
-// Initialize with the default category (Visualization)
-document.addEventListener('DOMContentLoaded', () => {
-    showCategory('visualization');
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
 });
