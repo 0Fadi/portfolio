@@ -383,21 +383,12 @@ span {
     align-items: center;
     gap: 2.5rem;
 }
-.services .service-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
-    background: #fff;
-    border-radius: 10px;
-}
-
-.services .service-box img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin-bottom: 10px;
+.service-box img {
+  width: 100%;
+  height: 300px;          /* match container height */
+  object-fit: cover;      /* scales image to cover area */
+  border-radius: 3rem;
+  display: block;
 }
 .service-box:hover{
     background: white;
@@ -509,11 +500,11 @@ span {
 }
 
 .portfolio-box img {
-  width: 100%;
-  height: auto; /* Let height adjust naturally */
-  object-fit: contain; /* Show the full image */
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s ease;
 }
-
 @media (max-width: 768px) {
     .portfolio-box {
         width: 100%; /* Stack items vertically on smaller screens */
@@ -796,12 +787,6 @@ span {
     font-size: 1rem;
     color: #888;
 }
-
-
-
-
-
-
 
 
 
