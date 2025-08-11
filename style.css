@@ -383,27 +383,13 @@ span {
     align-items: center;
     gap: 2.5rem;
 }
-.services .service-box {
-    background-size: contain; /* Show entire image */
-    background-repeat: no-repeat; /* No repeating */
-    background-position: center; /* Center the image */
-    height: 300px; /* Or adjust as needed */
+.services .service-box img {
     width: 100%;
-}
-.service-box img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: auto;       
-  object-fit: cover;      /* scales image to cover area */
-  border-radius: 3rem;
-  display: block;
-}
-.services .service-box {
-    background-size: contain; /* Show entire image */
-    background-repeat: no-repeat; /* No repeating */
-    background-position: center; /* Center the image */
-    height: 300px; /* Or adjust as needed */
-    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px; /* match your style */
+    background-color: #fff; /* optional for clean background */
 }
 .service-box:hover{
     background: white;
@@ -802,6 +788,7 @@ span {
     font-size: 1rem;
     color: #888;
 }
+
 
 
 
