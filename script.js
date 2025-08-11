@@ -1,6 +1,6 @@
 // --- Projects filtering by category ---
 function showCategory(category) {
-  const boxes = document.querySelectorAll('.portfolio-box.filterable');
+  const boxes = document.querySelectorAll('.portfolio-box');
   boxes.forEach(box => {
     if (category === 'all' || box.classList.contains(category)) {
       box.style.display = 'block';
@@ -57,4 +57,3 @@ window.addEventListener('load', () => {
   activateNavLink();
   showCategory('visualization'); // Show visualization category by default, change as needed
 });
-
