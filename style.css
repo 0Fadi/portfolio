@@ -500,11 +500,11 @@ span {
 }
 
 .portfolio-box img {
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: auto; /* Let height adjust naturally */
+  object-fit: contain; /* Show the full image */
 }
+
 @media (max-width: 768px) {
     .portfolio-box {
         width: 100%; /* Stack items vertically on smaller screens */
@@ -787,6 +787,7 @@ span {
     font-size: 1rem;
     color: #888;
 }
+
 
 
 
