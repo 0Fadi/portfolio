@@ -311,14 +311,13 @@ span {
     color: white;
     margin: 6px 0 15px;
 }
-.certificates .timeline-content img {
-    width: 100%;
-    max-width: 500px; /* تحدد أقصى عرض للشهادة */
-    height: auto;
-    margin-top: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    object-fit: contain;
+.timeline-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px; /* center with spacing below */
+  border-radius: 1.5rem; /* optional: rounded corners */
+  object-fit: cover; /* ensures good scaling */
 }
 .timeline-content {
   background-color: var(--bg-color);
@@ -384,11 +383,12 @@ span {
     align-items: center;
     gap: 2.5rem;
 }
- .service-box img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain; /* يحافظ على الأبعاد */
+.service-box img {
+  width: 100%;
+  height: 300px;          /* match container height */
+  object-fit: cover;      /* scales image to cover area */
+  border-radius: 3rem;
+  display: block;
 }
 .service-box:hover{
     background: white;
@@ -787,9 +787,6 @@ span {
     font-size: 1rem;
     color: #888;
 }
-
-
-
 
 
 
