@@ -383,12 +383,11 @@ span {
     align-items: center;
     gap: 2.5rem;
 }
-.service-box img {
-  width: 100%;
-  height: 300px;          /* match container height */
-  object-fit: cover;      /* scales image to cover area */
-  border-radius: 3rem;
-  display: block;
+ .service-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* يحافظ على الأبعاد */
 }
 .service-box:hover{
     background: white;
@@ -787,6 +786,7 @@ span {
     font-size: 1rem;
     color: #888;
 }
+
 
 
 
