@@ -311,13 +311,14 @@ span {
     color: white;
     margin: 6px 0 15px;
 }
-.timeline-content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px; /* center with spacing below */
-  border-radius: 1.5rem; /* optional: rounded corners */
-  object-fit: cover; /* ensures good scaling */
+.certificates .timeline-content img {
+    width: 100%;
+    max-width: 500px; /* تحدد أقصى عرض للشهادة */
+    height: auto;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: contain;
 }
 .timeline-content {
   background-color: var(--bg-color);
@@ -786,6 +787,7 @@ span {
     font-size: 1rem;
     color: #888;
 }
+
 
 
 
